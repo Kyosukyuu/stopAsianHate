@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -14,17 +14,39 @@
       integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
       crossorigin="anonymous"
     />
+
+    <!-- CUSTOM CSS -->
+    <style>
+      body {
+        background-image: url("./assets/images/chinatown.jpg");
+        backdrop-filter: saturate(0.8) blur(2px) brightness(0.9)
+          contrast(1.1);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .btn-container {
+        min-width: 3rem;
+        max-width: 30rem;
+      }
+      h1 {
+        opacity: 0.85;
+      }
+    </style>
   </head>
-  <body>
-    <main class="container-fluid">
-      <h1 class="text-center">Stop Asian Hate: The Adventure</h1>
+  <body class="h-100">
+    <header>
+      <h1 class="text-center display-3 pb-2 bg-light shadow-sm">
+        Stop Asian Hate: The Adventure
+      </h1>
+    </header>
+
+    <main class="container-fluid d-flex justify-content-center">
       <section
-        class="d-flex flex-column align-items-center text-center my-5"
+        class="btn-container d-flex flex-column text-center my-5 py-4 mx-5 w-100 rounded-1"
       >
         <a href="/" class="btn btn-primary mb-5 fs-3">Start</a>
-        <a href="/pages/info.html" class="btn btn-outline-info fs-3"
-          >Info</a
-        >
+        <a href="/pages/info.html" class="btn btn-dark fs-3">Info</a>
       </section>
     </main>
 
