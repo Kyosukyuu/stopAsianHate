@@ -74,16 +74,16 @@
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="//cdn.jsdelivr.net/velocity/1.1.0/velocity.min.js"></script>
     <script>
+      $("#headerAnim")
+        .velocity({ top: -100, opacity: 0 }, 0)
+        .velocity({ top: 0, opacity: 0.95 }, 400);
+
       $("#leftAnim")
         .velocity({ left: -100, opacity: 0 }, 0)
         .velocity({ left: 0, opacity: 1 }, 1000);
       $("#rightAnim")
         .velocity({ right: -100, opacity: 0 }, 0)
         .velocity({ right: 0, opacity: 1 }, 1000);
-
-      $("#headerAnim")
-        .velocity({ top: -100, opacity: 0 }, 0)
-        .velocity({ top: 0, opacity: 1 }, 400);
     </script>
   </body>
 </html>
