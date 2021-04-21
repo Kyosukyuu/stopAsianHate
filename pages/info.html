@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -14,11 +14,34 @@
       integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
       crossorigin="anonymous"
     />
+
+    <!-- CUSTOM CSS -->
+    <style>
+      body {
+        background-image: url("/assets/images/coronavirus.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        backdrop-filter: blur(2px) brightness(0.85) contrast(0.95)
+          saturate(0.9);
+      }
+    </style>
   </head>
-  <body>
-    <h1 class="text-center display-3">Information</h1>
+  <body class="h-100">
+    <header>
+      <h1
+        class="text-center display-3 pb-2 bg-light shadow-sm position-relative"
+        id="headerAnim"
+      >
+        Information
+      </h1>
+    </header>
+
     <main class="container-fluid">
-      <article class="container">
+      <article
+        class="container mt-5 p-3 bg-light rounded-3"
+        id="main-text"
+      >
         <p class="lead">
           This is a narrative-based, interactive website that is
           centered on the recent wave of Asian hate. Due to the
@@ -29,7 +52,7 @@
           You will be presented with different options throughout the
           story, which have different outcomes.
         </p>
-        <p class="lead">
+        <p class="lead mb-0">
           This project was created by Kevin Zhong, Bryan Kuncahyo, and
           Nicolas Wong.
         </p>
@@ -38,7 +61,10 @@
       <section
         class="d-flex flex-column align-items-center text-center my-5"
       >
-        <a href="/stopAsianHate" class="btn btn-outline-danger fs-3"
+        <a
+          href="/stopAsianHate"
+          class="btn btn-danger fs-3 position-relative"
+          id="btnAnim"
           >Back</a
         >
       </section>
@@ -54,6 +80,17 @@
     <!-- VELOCTIYJS -->
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="//cdn.jsdelivr.net/velocity/1.1.0/velocity.min.js"></script>
-    <script></script>
+    <script>
+      $("#headerAnim")
+        .velocity({ top: -100, opacity: 0 }, 0)
+        .velocity({ top: 0, opacity: 0.95 }, 400);
+
+      $("#main-text")
+        .velocity({ opacity: 0 }, 0)
+        .velocity({ opacity: 1 }, 450);
+      $("#btnAnim")
+        .velocity({ bottom: -15, opacity: 0 }, 0)
+        .velocity({ bottom: 0, opacity: 1 }, 1000);
+    </script>
   </body>
 </html>
