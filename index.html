@@ -36,7 +36,10 @@
   </head>
   <body class="h-100">
     <header>
-      <h1 class="text-center display-3 pb-2 bg-light shadow-sm">
+      <h1
+        class="text-center display-3 pb-2 bg-light shadow-sm position-relative"
+        id="headerAnim"
+      >
         Stop Asian Hate: The Adventure
       </h1>
     </header>
@@ -45,12 +48,16 @@
       <section
         class="btn-container d-flex flex-column text-center my-5 py-4 mx-5 w-100 rounded-1"
       >
-        <a href="/stopAsianHate" class="btn btn-primary mb-5 fs-3"
+        <a
+          href="/stopAsianHate"
+          class="btn btn-primary mb-5 fs-3 position-relative"
+          id="leftAnim"
           >Start</a
         >
         <a
-          href="./stopAsianHate/pages/info.html"
-          class="btn btn-dark fs-3"
+          href="/stopAsianHate/pages/info.html"
+          class="btn btn-dark fs-3 position-relative"
+          id="rightAnim"
           >Info</a
         >
       </section>
@@ -63,5 +70,20 @@
       integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
       crossorigin="anonymous"
     ></script>
+    <!-- VELOCTIYJS -->
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdn.jsdelivr.net/velocity/1.1.0/velocity.min.js"></script>
+    <script>
+      $("#leftAnim")
+        .velocity({ left: -100, opacity: 0 }, 0)
+        .velocity({ left: 0, opacity: 1 }, 1000);
+      $("#rightAnim")
+        .velocity({ right: -100, opacity: 0 }, 0)
+        .velocity({ right: 0, opacity: 1 }, 1000);
+
+      $("#headerAnim")
+        .velocity({ top: -100, opacity: 0 }, 0)
+        .velocity({ top: 0, opacity: 1 }, 400);
+    </script>
   </body>
 </html>
