@@ -16,27 +16,51 @@
     />
 
     <!-- CUSTOM CSS -->
-    <style></style>
+    <style>
+      body {
+        background-image: url("/assets/images/home.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      .btn-container {
+        min-width: 3rem;
+        max-width: 18rem;
+      }
+    </style>
   </head>
   <body class="h-100">
-    <header></header>
+    <header>
+      <h1 class="text-center display-5 bg-dark px-2 pb-2 text-white">
+        It’s a boring Saturday morning... What do you decide to do?
+      </h1>
+    </header>
 
     <main class="container-fluid">
       <section
-        class="d-flex flex-column align-items-center text-center my-5"
+        class="d-flex flex-column align-items-center text-center my-5 btn-container mx-auto bg-light rounded p-4"
       >
-        <h3>
-          It’s a boring Saturday morning... What do you decide to do?
-        </h3>
-        <section class="d-flex flex-column">
-          <a href="#" class="btn btn-dark fs-3 position-relative"
-            >Stay inside</a
-          >
-          <p class="my-3">OR</p>
-          <a href="#" class="btn btn-dark fs-3 position-relative"
-            >Go outside</a
-          >
+        <a
+          href="#"
+          class="btn btn-dark fs-3 position-relative w-100"
+          id="leftAnim"
+          >Stay inside</a
+        >
+        <section
+          class="d-flex flex-nowrap w-100 align-items-center"
+          id="choiceIntersect"
+        >
+          <hr class="w-100 border border-secondary mx-2" />
+          <p class="my-3 fs-4 text-dark">OR</p>
+          <hr class="w-100 border border-secondary mx-2" />
         </section>
+
+        <a
+          href="#"
+          class="btn btn-dark fs-3 position-relative w-100"
+          id="rightAnim"
+          >Go outside</a
+        >
       </section>
     </main>
 
@@ -50,6 +74,17 @@
     <!-- VELOCTIYJS -->
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="//cdn.jsdelivr.net/velocity/1.1.0/velocity.min.js"></script>
-    <script></script>
+    <script>
+      $("#choiceIntersect")
+        .velocity({ opacity: 0 }, 0)
+        .velocity({ opacity: 1 }, 600);
+
+      $("#leftAnim")
+        .velocity({ left: -15, opacity: 0 }, 0)
+        .velocity({ left: 0, opacity: 1 }, 1150);
+      $("#rightAnim")
+        .velocity({ right: -15, opacity: 0 }, 0)
+        .velocity({ right: 0, opacity: 1 }, 1150);
+    </script>
   </body>
 </html>
