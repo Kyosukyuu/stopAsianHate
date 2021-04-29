@@ -19,9 +19,11 @@
     <style>
       body {
         background-image: url("/stopAsianHate/assets/images/coronavirus.png");
+        /* background-image: url("/assets/images/coronavirus.png"); */
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        background-attachment: fixed;
         backdrop-filter: blur(2px) brightness(0.85) contrast(0.95)
           saturate(0.9);
       }
@@ -39,31 +41,61 @@
 
     <main class="container-fluid">
       <article
-        class="container mt-5 p-3 bg-light rounded-3"
+        class="container mt-5 p-3 bg-light rounded-3 text-break"
         id="main-text"
       >
-        <p class="lead">
-          This is a narrative-based, interactive website that is
-          centered on the recent wave of Asian hate. Due to the
-          COVID-19 pandemic, Asians have received unjustified hate,
-          which have led to several cases of Asian hate crimes.
-        </p>
-        <p class="lead">
-          You will be presented with different options throughout the
-          story, which have different outcomes.
-        </p>
-        <p class="lead mb-0">
-          This project was created by Kevin Zhong, Bryan Kuncahyo, and
-          Nicolas Wong.
-        </p>
-      </article>
+        <header>
+          <h3 class="display-6 mb-3 subTitleAnim position-relative">
+            Background & Context
+          </h3>
+        </header>
+        <section>
+          <p class="lead textAnim position-relative">
+            This is a second-person narrative-based, interactive
+            website that is centered on the recent wave of Asian hate.
+            Due to the COVID-19 pandemic, Asians in the United States
+            have received an increased amount of unjustified hate,
+            which has led to several cases of Asian hate crimes. Our
+            project aims to address this particular kind of hate in a
+            way that is (hopefully) more interactive and engaging than
+            traditional methods.
+          </p>
+          <p class="lead textAnim position-relative">
+            Furthermore, the main purpose of the project is for other
+            people to understand Asian hate crimes from a victim's
+            perspective.
+          </p>
+          <p class="lead mb-0 fst-italic textAnim position-relative">
+            This project was created by Kevin Zhong, Bryan Kuncahyo,
+            and Nicolas Wong for the Humanities 201 Creative Project.
+          </p>
+        </section>
 
+        <hr class="w-100 border border-secondary" />
+
+        <header class="">
+          <h3 class="display-6 mb-3 subTitleAnim position-relative">
+            Directions
+          </h3>
+        </header>
+        <section>
+          <p class="lead textAnim position-relative">
+            In story, you will play as an Asian American who goes
+            about their day. You will be presented with different
+            options throughout the story, which have different
+            outcomes. The ending(s) you reach are dependent on the
+            choices you make along the story.
+          </p>
+
+          <p class="lead textAnim position-relative"></p>
+        </section>
+      </article>
       <section
         class="d-flex flex-column align-items-center text-center my-5"
       >
         <a
           href="/stopAsianHate"
-          class="btn btn-danger fs-3 position-relative"
+          class="btn btn-danger fs-3 position-relative mb-5"
           id="btnAnim"
           >Back</a
         >
@@ -91,6 +123,13 @@
       $("#btnAnim")
         .velocity({ bottom: -15, opacity: 0 }, 0)
         .velocity({ bottom: 0, opacity: 1 }, 1000);
+
+      $(".subTitleAnim")
+        .velocity({ right: -10 }, 0)
+        .velocity({ right: 0 }, 600);
+      $(".textAnim")
+        .velocity({ right: -5 }, 0)
+        .velocity({ right: 0 }, 950);
     </script>
   </body>
 </html>
