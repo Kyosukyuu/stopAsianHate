@@ -18,66 +18,51 @@
     <!-- CUSTOM CSS -->
     <style>
       body {
-        /* background-image: url("/stopAsianHate/assets/images/twitterbg.jpg"); */
-        background-image: url("/assets/images/twitterbg.jpg");
+        background-image: url("/stopAsianHate/assets/images/room.jpg");
+        /* background-image: url("/assets/images/room.jpg"); */
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
-        backdrop-filter: blur(4px) brightness(0.75);
+        backdrop-filter: blur(2px) brightness(0.75) hue-rotate(68deg)
+          saturate(1.15);
       }
 
       .btn-container {
         min-width: 3rem;
-        max-width: 18rem;
+        max-width: 30rem;
       }
 
       .mainImg {
-        max-width: 550px;
+        max-width: 425px;
       }
     </style>
   </head>
   <body class="h-100">
-    <header class="mx-5 d-flex flex-column align-items-center mb-4">
+    <header class="pt-3 mx-5 d-flex justify-content-center">
       <h1
-        class="text-center display-5 bg-dark px-2 pb-2 text-white mx-5 rounded-1 text-break w-100 mt-3 mb-3"
+        class="text-center display-5 bg-dark px-2 pb-2 mb-3 text-white mx-5 rounded-1 text-break"
       >
-        You go on Twitter. Nothing too interesting is going on, but a
-        racist tweet directed towards Asians catches your eye... How
-        do you respond?
+        Good Ending
       </h1>
-      <img
-        src="/stopAsianHate/assets/images/tweet.jpg"
-        alt="racist tweet"
-        class="mainImg w-100 rounded-3"
-      />
     </header>
-
     <main class="container-fluid">
+      <section class="d-flex justify-content-center">
+        <img
+          src="/stopAsianHate/assets/images/twitterSuspend.jpg"
+          alt="person suspended from Twitter"
+          class="mainImg rounded-3"
+        />
+      </section>
       <section
-        class="d-flex flex-column align-items-center text-center my-1 btn-container mx-auto bg-light rounded p-4"
+        class="d-flex flex-column align-items-center my-4 btn-container mx-auto bg-light rounded p-4"
       >
-        <a
-          href="/stopAsianHate/pages/story/endings/ne1.html"
-          class="btn btn-dark fs-3 position-relative w-100"
-          id="leftAnim"
-          >You ignore the tweet</a
-        >
-        <section
-          class="d-flex flex-nowrap w-100 align-items-center"
-          id="choiceIntersect"
-        >
-          <hr class="w-100 border border-secondary mx-2" />
-          <p class="my-3 fs-4 text-dark">OR</p>
-          <hr class="w-100 border border-secondary mx-2" />
-        </section>
-
-        <a
-          href="/stopAsianHate/pages/story/endings/ge1.html"
-          class="btn btn-dark fs-3 position-relative w-100"
-          id="rightAnim"
-          >You report the Tweeter
-        </a>
+        <p class="fs-4 text-dark mb-0">
+          You report the tweet for racism. You check back on the tweet
+          later and see that the person's account is temporarily
+          suspended. Hopefully that will prevent some others from
+          doing the same...
+        </p>
       </section>
     </main>
 
