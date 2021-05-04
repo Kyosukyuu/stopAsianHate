@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -17,9 +17,9 @@
 
     <!-- CUSTOM CSS -->
     <style>
-      body {
-        /* background-image: url("/stopAsianHate/assets/images/twitterbg.jpg"); */
-        background-image: url("https://en.instagram-brand.com/wp-content/uploads/2016/11/Glyph-Icon-hero.png");
+      html {
+        background-image: url("/stopAsianHate/assets/images/instagram.png");
+        /* background-image: url("/assets/images/instagram.png"); */
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -28,8 +28,8 @@
       }
 
       .btn-container {
-        min-width: 3rem;
-        max-width: 18rem;
+        /* min-width: 3rem; */
+        max-width: 66rem;
         /* flex: 370px; */
       }
 
@@ -38,7 +38,7 @@
       }
     </style>
   </head>
-  <body class="h-100">
+  <body class="bg-transparent">
     <header class="mx-5 d-flex flex-column align-items-center mb-4">
       <h1
         class="text-center display-5 bg-dark px-2 pb-2 text-white mx-5 rounded-1 text-break w-100 mt-3 mb-3"
@@ -50,39 +50,6 @@
     </header>
 
     <main class="container-fluid">
-      <!-- <article
-        class="d-flex mx-auto justify-content-center align-items-center"
-      >
-        <section
-          class="p-4 bg-light btn-container d-flex justify-content-center"
-        >
-          <a
-            href="#"
-            class="btn btn-dark fs-3 position-relative"
-            id="leftAnim"
-            >You comment on the video and share it</a
-          >
-        </section>
-        <section class="d-flex justify-content-center">
-          <video width="200" height="380" controls>
-            <source
-              src="/assets/video/subwayRacism.mp4"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>
-        </section>
-        <section
-          class="p-4 bg-light btn-container d-flex justify-content-center"
-        >
-          <a
-            href="#"
-            class="btn btn-dark fs-3 position-relative"
-            id="rightAnim"
-            >You ignore the video</a
-          >
-        </section>
-      </article> -->
       <section class="d-flex justify-content-center">
         <video width="200" height="380" controls>
           <source
@@ -92,7 +59,27 @@
           Your browser does not support the video tag.
         </video>
       </section>
-      <article></article>
+      <article
+        class="p-4 mt-3 mb-3 bg-light btn-container d-flex justify-content-center mx-auto flex-wrap flex-md-nowrap"
+      >
+        <a
+          href="#"
+          class="btn btn-dark fs-3 position-relative w-100 d-flex justify-content-center align-items-center"
+          id="leftAnim"
+          >You comment on the video and share it</a
+        >
+        <section class="d-flex w-100 my-3 align-items-center">
+          <hr class="w-100 border border-secondary mx-2" />
+          <p class="h3 m-0">OR</p>
+          <hr class="w-100 border border-secondary mx-2" />
+        </section>
+        <a
+          href="#"
+          class="btn btn-dark fs-3 position-relative w-100 d-flex justify-content-center align-items-center"
+          id="rightAnim"
+          >You ignore the video</a
+        >
+      </article>
     </main>
 
     <!-- SCRIPTS -->
