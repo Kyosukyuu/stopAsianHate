@@ -18,55 +18,50 @@
     <!-- CUSTOM CSS -->
     <style>
       body {
-        background-image: url("/stopAsianHate/assets/images/outsideHome.jpg");
-        /* background-image: url("/assets/images/outsideHome.jpg"); */
-        /* background-repeat: no-repeat;
+        /* background-image: url("/stopAsianHate/assets/images/home.jpg"); */
+        background-image: url("/assets/images/home.jpg");
+        background-repeat: no-repeat;
         background-size: cover;
-        background-position: bottom;
+        background-position: center;
         background-attachment: fixed;
-        backdrop-filter: blur(2px) brightness(0.75); */
+        backdrop-filter: blur(2px) brightness(0.75) sepia(0.8);
       }
 
       .btn-container {
         min-width: 3rem;
-        max-width: 18rem;
+        max-width: 30rem;
+      }
+
+      .mainImg {
+        max-width: 505px;
       }
     </style>
   </head>
   <body class="h-100">
-    <header class="pt-5 mx-5">
+    <header class="pt-3 mx-5 d-flex justify-content-center">
       <h1
-        class="text-center display-5 bg-dark px-2 pb-2 text-white mx-5 rounded-1 text-break"
+        class="text-center display-5 bg-dark px-2 pb-2 mb-3 text-white mx-5 rounded-1 text-break"
       >
-        You decided to go out, it is good to get some fresh air after
-        all. Where do you choose to go?
+        Neutral Ending
       </h1>
     </header>
-
     <main class="container-fluid">
+      <section class="d-flex justify-content-center">
+        <img
+          src="/stopAsianHate/assets/images/news2.jpg"
+          alt="abc news article about Asian hate crimes"
+          class="mainImg rounded-3 w-100"
+        />
+      </section>
       <section
-        class="d-flex flex-column align-items-center text-center my-5 btn-container mx-auto bg-light rounded p-4"
+        class="d-flex flex-column align-items-center my-4 btn-container mx-auto bg-light rounded p-4"
       >
-        <a
-          href="stopAsianHate/pages/story/3c.html"
-          class="btn btn-dark fs-3 position-relative w-100"
-          id="leftAnim"
-          >Go to Chinatown (by car)</a
-        >
-        <section
-          class="d-flex flex-nowrap w-100 align-items-center"
-          id="choiceIntersect"
-        >
-          <hr class="w-100 border border-secondary mx-2" />
-          <p class="my-3 fs-4 text-dark">OR</p>
-          <hr class="w-100 border border-secondary mx-2" />
-        </section>
-        <a
-          href="#"
-          class="btn btn-dark fs-3 position-relative w-100"
-          id="rightAnim"
-          >Go to K-Town (by subway)</a
-        >
+        <p class="fs-4 text-dark mb-0">
+          Due to news of the protest at Chinatown going on, you
+          ultimately choose to go back home. You happen to look at the
+          news and you find this news article. Was there something you
+          could have done...?
+        </p>
       </section>
     </main>
 
