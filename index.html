@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta
@@ -17,15 +17,6 @@
 
     <!-- CUSTOM CSS -->
     <style>
-      body {
-        background-image: url("./assets/images/chinatown.jpg");
-        backdrop-filter: saturate(0.75) blur(3px) brightness(0.87)
-          contrast(1.1);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-      }
       .btn-container {
         min-width: 3rem;
         max-width: 30rem;
@@ -33,35 +24,100 @@
       h1 {
         opacity: 0.85;
       }
+      #inspiration img {
+        filter: brightness(0.7) blur(1px);
+      }
     </style>
   </head>
-  <body class="h-100">
-    <header>
-      <h1
-        class="text-center display-3 pb-2 bg-light shadow-sm position-relative"
-        id="headerAnim"
-      >
-        Stop Asian Hate: The Adventure
-      </h1>
+  <body class="bg-light">
+    <header
+      class="bg-dark text-white px-3 py-2 mb-2 text-center shadow-sm"
+    >
+      <h1>Stop Asian Hate: The Adventure</h1>
     </header>
 
-    <main class="container-fluid d-flex justify-content-center">
-      <section
-        class="btn-container d-flex flex-column text-center my-5 py-4 mx-5 w-100 rounded-1"
-      >
-        <a
-          href="/stopAsianHate/pages/story/1.html"
-          class="btn btn-primary mb-5 fs-3 position-relative"
-          id="leftAnim"
-          >Start</a
+    <main
+      class="d-flex align-items-center flex-column container pb-2"
+    >
+      <article class="d-flex bg-white rounded-2 shadow my-3">
+        <section
+          class="row flex-lg-row align-items-center g-5 py-5 mx-1"
         >
-        <a
-          href="/stopAsianHate/pages/info.html"
-          class="btn btn-dark fs-3 position-relative"
-          id="rightAnim"
-          >Info</a
+          <section class="col-lg-6">
+            <header>
+              <h1 class="display-5 fw-bold lh-1 mb-4 text-dark">
+                Asians & COVID-19
+              </h1>
+            </header>
+            <section>
+              <p class="lead">
+                Jump in the shoes of an Asian person living in a time
+                where Asians are being discriminated as a result of
+                the COVID-19 pandemic. How would you confront the
+                world?
+              </p>
+              <div
+                class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3"
+              >
+                <a
+                  href="/stopAsianHate/pages/story/1.html"
+                  class="btn btn-lg btn-primary position-relative"
+                  id="leftAnim"
+                  >Start Story</a
+                >
+                <a
+                  href="/stopAsianHate/pages/info.html"
+                  class="btn btn-lg btn-outline-dark border-1 position-relative"
+                  id="rightAnim"
+                  >More Info</a
+                >
+              </div>
+            </section>
+          </section>
+
+          <section class="col-10 col-sm-8 col-lg-6 d-none d-md-block">
+            <img
+              class="w-100 rounded-1 shadow-sm"
+              src="/assets/images/chinatown.jpg"
+              alt="chinatown"
+            />
+          </section>
+          <section
+            class="col-10 col-sm-8 col-lg-6 w-100 d-block d-md-none"
+          >
+            <img
+              class="w-100 rounded-1"
+              src="/assets/images/chinatown.jpg"
+              alt="chinatown"
+            />
+          </section>
+        </section>
+      </article>
+      <article class="row w-100">
+        <div
+          class="row row-cols-1 row-cols-lg-3 align-items-stretch p-0 m-0"
         >
-      </section>
+          <div class="col p-0">
+            <section
+              class="card rounded d-flex justify-content-center"
+              id="inspiration"
+            >
+              <img
+                class="w-100 rounded"
+                src="/assets/images/writingbg.jpg"
+                alt="writing bg"
+              />
+              <article class="position-absolute w-100">
+                <h2
+                  class="p-3 w-100 text-center text-white display-4"
+                >
+                  Inspiration
+                </h2>
+              </article>
+            </section>
+          </div>
+        </div>
+      </article>
     </main>
 
     <!-- SCRIPTS -->
