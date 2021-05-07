@@ -20,16 +20,6 @@
     />
     <!-- CUSTOM CSS -->
     <style>
-      body {
-        /* background-image: url("/stopAsianHate/assets/images/coronavirus.png"); */
-        /* background-image: url("/assets/images/coronavirus.png"); */
-        /* background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        backdrop-filter: blur(2px) brightness(0.85) contrast(0.95)
-          saturate(0.9); */
-      }
       .icon-align {
         left: -3.6rem;
         top: 25%;
@@ -63,7 +53,7 @@
               >
             </h3>
             <article class="d-lg-flex">
-              <section>
+              <section class="textAnim position-relative">
                 <p>
                   This is a second-person narrative-based, interactive
                   website that is centered on the recent wave of Asian
@@ -89,7 +79,7 @@
               <div>
                 <img
                   class="w-100 rounded-2 shadow-sm"
-                  src="/assets/images/coronavirus.png"
+                  src="stopAsianHate/assets/images/coronavirus.png"
                   alt=""
                 />
               </div>
@@ -113,7 +103,7 @@
               >
             </h3>
             <article class="d-lg-flex">
-              <section>
+              <section class="textAnim">
                 <p>
                   In story, you will play as an Asian American who
                   goes about their day. You will be presented with
@@ -151,16 +141,9 @@
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="//cdn.jsdelivr.net/velocity/1.1.0/velocity.min.js"></script>
     <script>
-      $("#headerAnim")
-        .velocity({ top: -100, opacity: 0 }, 0)
-        .velocity({ top: 0, opacity: 0.95 }, 400);
-
-      $("#main-text")
-        .velocity({ opacity: 0 }, 0)
-        .velocity({ opacity: 1 }, 450);
       $("#btnAnim")
-        .velocity({ bottom: -10, opacity: 0 }, 0)
-        .velocity({ bottom: 0, opacity: 1 }, 1000);
+        .velocity({ opacity: 0 }, 0)
+        .velocity({ opacity: 1 }, 1000);
 
       $(".subTitleAnim")
         .velocity({ right: -10 }, 0)
