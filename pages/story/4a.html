@@ -48,7 +48,9 @@
     </style>
   </head>
   <body class="h-100">
-    <header class="pt-3 mx-5 d-flex flex-column align-items-start">
+    <header
+      class="pt-3 mx-1 mx-lg-5 d-flex flex-column align-items-start"
+    >
       <section
         class="px-3 mx-5 bg-dark rounded-top pt-1 d-flex align-items-center"
       >
@@ -128,14 +130,14 @@
     </main>
 
     <!-- AUDIO -->
-    <audio hidden controls autoplay muted="false">
+    <audio hidden controls autoplay muted="false" id="musicPlayer">
       <source
         src="/stopAsianHate/assets/audio/music/bensound-thelounge.mp3"
         type="audio/mpeg"
       />
       Your browser does not support the audio element.
     </audio>
-    <audio hidden controls autoplay muted="false">
+    <audio hidden controls autoplay muted="false" id="sfxPlayer">
       <source
         src="/stopAsianHate/assets/audio/sounds/thegoose09__iphone_edited.wav"
         type="audio/wav"
@@ -194,6 +196,9 @@
           $("audio")[0].pause();
         }
       });
+      $("#musicPlayer").on("ended", () => {
+        $("#music span").text("music_off");
+      });
 
       $("audio")[1].volume = 0.9;
       $("audio")[1].muted = false;
@@ -211,6 +216,9 @@
           $("#sfx span").text("volume_off");
           $("audio")[1].pause();
         }
+      });
+      $("#sfxPlayer").on("ended", () => {
+        $("#sfx span").text("volume_off");
       });
     </script>
   </body>
