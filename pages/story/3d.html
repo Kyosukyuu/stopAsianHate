@@ -156,6 +156,9 @@
       $("#rightAnim")
         .velocity({ right: -15, opacity: 0 }, 0)
         .velocity({ right: 0, opacity: 1 }, 1150);
+      $("#downAnim")
+        .velocity({ up: -15, opacity: 0 }, 0)
+        .velocity({ up: 0, opacity: 1 }, 1150);
 
       var tooltipTriggerList = [].slice.call(
         document.querySelectorAll('[data-bs-toggle="tooltip"]')
