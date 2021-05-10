@@ -18,10 +18,14 @@
     <!-- CUSTOM CSS -->
     <style>
       #inspiration img {
-        filter: brightness(0.7) blur(1px);
+        filter: brightness(0.7);
+        transition: 0.3s;
       }
       #inspiration h2 {
         text-shadow: #313535 1px 1px 2px;
+      }
+      #inspPage:hover img {
+        filter: brightness(0.6) blur(1px);
       }
     </style>
   </head>
@@ -98,35 +102,30 @@
         <div
           class="row row-cols-1 row-cols-lg-3 align-items-stretch p-0 m-0"
         >
-          <div class="col p-0">
-            <section
-              class="card rounded d-flex justify-content-center"
-              id="inspiration"
-            >
-              <img
-                class="w-100 rounded"
-                src="./assets/images/writingbg.jpg"
-                alt="writing bg"
-              />
-              <article class="position-absolute w-100">
-                <h2
-                  class="p-3 mb-0 w-100 text-center text-white display-4"
-                >
-                  Inspiration
-                </h2>
-              </article>
-            </section>
+          <div class="col p-0" id="inspPage">
+            <a href="/pages/inspiration.html">
+              <section
+                class="card rounded d-flex justify-content-center"
+                id="inspiration"
+              >
+                <img
+                  class="w-100 rounded"
+                  src="./assets/images/writingbg.jpg"
+                  alt="writing bg"
+                />
+                <article class="position-absolute w-100">
+                  <h2
+                    class="p-3 mb-0 w-100 text-center text-white display-4"
+                  >
+                    Inspiration
+                  </h2>
+                </article>
+              </section>
+            </a>
           </div>
         </div>
       </article>
     </main>
-    <!-- <audio controls autoplay hidden>
-      <source
-        src="https://www.w3schools.com/tags/horse.mp3"
-        type="audio/mpeg"
-      />
-      Your browser does not support the audio element.
-    </audio> -->
     <!-- SCRIPTS -->
     <!-- BOOTSTRAP -->
     <script>
@@ -150,7 +149,6 @@
       $("#rightAnim")
         .velocity({ right: -15, opacity: 0 }, 0)
         .velocity({ right: 0, opacity: 1 }, 750);
-      // $("audio")[0].volume = 0.05;
     </script>
   </body>
 </html>
