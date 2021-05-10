@@ -46,7 +46,9 @@
     </style>
   </head>
   <body class="h-100">
-    <header class="pt-3 mx-5 d-flex flex-column align-items-start">
+    <header
+      class="pt-3 mx-1 mx-lg-5 d-flex flex-column align-items-start"
+    >
       <section
         class="px-3 mx-5 bg-dark rounded-top pt-1 d-flex align-items-center"
       >
@@ -114,7 +116,7 @@
     </main>
 
     <!-- AUDIO -->
-    <audio hidden controls autoplay muted="false">
+    <audio hidden controls autoplay muted="false" id="musicPlayer">
       <source
         src="/stopAsianHate/assets/audio/music/bensound-thelounge.mp3"
         type="audio/mpeg"
@@ -156,6 +158,7 @@
       ) {
         return new bootstrap.Tooltip(tooltipTriggerEl);
       });
+
       $("audio")[0].volume = 0.06;
       $("audio")[0].muted = false;
       $("audio")[0].pause();
@@ -172,6 +175,9 @@
           $("#music span").text("music_off");
           $("audio")[0].pause();
         }
+      });
+      $("#musicPlayer").on("ended", () => {
+        $("#music span").text("music_off");
       });
     </script>
   </body>
