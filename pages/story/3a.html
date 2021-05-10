@@ -72,17 +72,6 @@
             >music_note</span
           >
         </button>
-        <button
-          class="border-0 bg-dark p-0 d-flex align-items-center pe-auto"
-          id="sfx"
-          data-bs-toggle="tooltip"
-          data-bs-placement="top"
-          title="Toggle SFX"
-        >
-          <span class="material-icons text-light mx-2 fs-1"
-            >volume_up</span
-          >
-        </button>
       </section>
       <h1
         class="display-5 bg-dark px-3 pb-2 text-white mx-5 rounded-bottom text-break"
@@ -125,7 +114,7 @@
     <!-- AUDIO -->
     <audio hidden controls autoplay muted="false">
       <source
-        src="/stopAsianHate/assets/audio/music/bensound-clearday.mp3"
+        src="/stopAsianHate/assets/audio/music/bensound-thelounge.mp3"
         type="audio/mpeg"
       />
       Your browser does not support the audio element.
@@ -165,7 +154,8 @@
       ) {
         return new bootstrap.Tooltip(tooltipTriggerEl);
       });
-      $("audio")[0].volume = 0.02;
+
+      $("audio")[0].volume = 0.06;
       $("audio")[0].muted = false;
       $("audio")[0].pause();
       if ($("audio")[0].paused) {
