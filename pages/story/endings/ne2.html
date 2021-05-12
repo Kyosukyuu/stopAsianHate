@@ -19,7 +19,11 @@
       integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
       crossorigin="anonymous"
     />
-
+    <!-- MATERIAL DESIGN ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <!-- CUSTOM CSS -->
     <style>
       body {
@@ -43,12 +47,60 @@
     </style>
   </head>
   <body class="h-100">
-    <header class="pt-3 mx-5 d-flex justify-content-center">
+    <header
+      class="
+        pt-3
+        mx-5
+        d-flex
+        justify-content-center
+        align-items-baseline
+      "
+    >
+      <span
+        class="
+          material-icons
+          text-warning
+          fw-bold
+          fs-3
+          bg-dark
+          rounded-circle
+          position-relative
+        "
+        id="ltr"
+      >
+        flaky
+      </span>
       <h1
-        class="text-center display-5 bg-dark px-2 pb-2 mb-3 text-white mx-5 rounded-1 text-break"
+        class="
+          text-center
+          display-5
+          bg-dark
+          px-2
+          pb-2
+          mb-3
+          text-white
+          mx-5
+          rounded-1
+          text-break
+        "
+        id="ending"
       >
         Neutral Ending
       </h1>
+      <span
+        class="
+          material-icons
+          text-warning
+          fw-bold
+          fs-3
+          bg-dark
+          rounded-circle
+          position-relative
+        "
+        id="rtl"
+      >
+        flaky
+      </span>
     </header>
     <main class="container-fluid">
       <section class="d-flex justify-content-center">
@@ -59,13 +111,29 @@
         /> -->
       </section>
       <section
-        class="d-flex flex-column align-items-center my-4 btn-container mx-auto bg-light rounded p-4"
+        class="
+          d-flex
+          flex-column
+          btn-container
+          bg-light
+          rounded
+          mx-auto
+          my-4
+          py-3
+          px-4
+        "
       >
         <p class="fs-4 text-dark mb-0">
           After watching the video, you just decide to move on with
           your day. After all, it doesn't concern you, so what's the
           point in doing anything at all...?
         </p>
+        <a
+          href="/stopAsianHate"
+          class="btn btn-lg btn-danger position-relative mt-2"
+          id="btnAnim"
+          >Return Home</a
+        >
       </section>
     </main>
 
@@ -80,16 +148,15 @@
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="//cdn.jsdelivr.net/velocity/1.1.0/velocity.min.js"></script>
     <script>
-      $("#choiceIntersect")
+      $("#ending")
         .velocity({ opacity: 0 }, 0)
-        .velocity({ opacity: 1 }, 600);
-
-      $("#leftAnim")
-        .velocity({ left: -15, opacity: 0 }, 0)
-        .velocity({ left: 0, opacity: 1 }, 1150);
-      $("#rightAnim")
-        .velocity({ right: -15, opacity: 0 }, 0)
-        .velocity({ right: 0, opacity: 1 }, 1150);
+        .velocity({ opacity: 1 }, 1150);
+      $("#ltr")
+        .velocity({ left: -5, opacity: 0 }, 0)
+        .velocity({ left: 0, opacity: 1 }, 750);
+      $("#rtl")
+        .velocity({ right: -5, opacity: 0 }, 0)
+        .velocity({ right: 0, opacity: 1 }, 750);
     </script>
   </body>
 </html>
